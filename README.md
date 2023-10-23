@@ -1,5 +1,5 @@
 # :bed: Bowie BNB :fork_and_knife:
-###*Insert catchy tagline here*
+###Insert catchy tagline here
 ---
 
 ### Sprint Status :running:
