@@ -41,6 +41,8 @@ To view all progress on the project please visit the Asana project
 
 -- Insert link to mockups --
 
+### Useful Links
 
+- [Top Tips Section](./team_resources/top_tips.md)
 
 [^1]: *A Team Bowie Project*
