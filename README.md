@@ -1,5 +1,6 @@
 # :bed: Bowie BNB :fork_and_knife:
-### Insert catchy tagline here
+
+![Gif Explaning the meaning behind b.o.w.i.e](team_resources/github_images/bowie_gif_6.gif?raw=true "Beds Over A Web Interface Everywhere")
 ---
 
 ### Sprint Status :running:
