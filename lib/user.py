@@ -1,1 +1,1 @@
-# User class
+# User data class
