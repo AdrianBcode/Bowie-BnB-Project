@@ -5,7 +5,7 @@
 
 ### Sprint Status :running:
 
-- [ ] Sprint 1
+- [x] Sprint 1
 - [ ] Sprint 2
 - [ ] Final Sprint
 
