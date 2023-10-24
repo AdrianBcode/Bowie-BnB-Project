@@ -1,5 +1,6 @@
 # :bed: Bowie BNB :fork_and_knife:
-### Insert catchy tagline here
+
+![Gif Explaning the meaning behind b.o.w.i.e](./team_resources/github_images/bowie_gif_6.gif?raw=true "Beds Over A Web Interface Everywhere")
 ---
 
 ### Sprint Status :running:
@@ -12,9 +13,15 @@
 ---
 ### How do I install the project? :cd:
 
-1. <to add step> -- 
-2. <to add step> --
-3. <to add step> --
+1. `pipenv install`
+2. `pipenv shell`
+3. `playwright install`
+4. `createdb bowie_bnb`
+5. `createdb bowie_bnb_test`
+
+Run with `python app.py`
+
+Test with `pytest -sv`
 
 
 ### How do I view the progress of the project? :chart_with_upwards_trend:
