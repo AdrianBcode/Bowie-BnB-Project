@@ -19,8 +19,9 @@ CREATE SEQUENCE IF NOT EXISTS users_id_seq;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    password VARCHAR(255),
-    email VARCHAR(255)
+    email VARCHAR(255),
+    password VARCHAR(255)
+    
 );
 
 --  Creates accommodation table
@@ -47,3 +48,4 @@ CREATE TABLE bookings (
 -- Adds records for testing
 
 INSERT INTO accommodations (place_name, start_date, end_date, host_id) VALUES ('Goldeneye', '20/12/23', '27/12/23', 7);
+INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes');
