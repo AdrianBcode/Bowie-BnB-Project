@@ -33,9 +33,11 @@ CREATE SEQUENCE IF NOT EXISTS accommodations_id_seq;
 CREATE TABLE accommodations (
     id SERIAL PRIMARY KEY,
     place_name VARCHAR(255),
-    start_date VARCHAR(255),
-    end_date VARCHAR(255),
-    host_id int
+    host_id int,
+    img_path VARCHAR(255),
+    description VARCHAR(255),
+    price VARCHAR(255),
+    constraint fk_host foreign key(host_id) references users(id) on delete cascade
 );
 
 --  Creates listings table
@@ -45,21 +47,25 @@ CREATE TABLE listings (
     user_id int,
     accommodation_id int,
     is_booked BOOLEAN,
+    start_date VARCHAR(255),
+    end_date VARCHAR(255),
     constraint fk_user foreign key(user_id) references users(id) on delete cascade,
     constraint fk_accommodation foreign key(accommodation_id) references accommodations(id) on delete cascade
 );
 
--- Adds records for testing
+-- -- Adds records for testing -- -- 
 
 
--- Adds example accommodations to table 
-
-INSERT INTO accommodations (place_name, start_date, end_date, host_id) VALUES ('Goldeneye', '20/12/23', '27/12/23', 7);
-
--- Adds example users to table 
+-- -- Adds example users to table 
 
 INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes');
 
--- Adds example listings to table 
 
-INSERT INTO listings (user_id, accommodation_id, is_booked) VALUES (1, 1, TRUE);
+-- -- Adds example accommodations to table 
+
+INSERT INTO accommodations (place_name, host_id, img_path, description, price) VALUES ('Goldeneye', 1, 'static/assets/accomodation_images/img_1.jpg','insert thing here','£2000 Per Night');
+
+
+-- -- Adds example listings to table 
+
+INSERT INTO listings (user_id, accommodation_id, is_booked, start_date,end_date) VALUES (1, 1, TRUE,'10/10/2023','10/11/2023');
