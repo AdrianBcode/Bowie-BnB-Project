@@ -1,18 +1,17 @@
 
 
---  Drop users table and it's sequence (if they exist)
-DROP TABLE IF EXISTS users;
-DROP SEQUENCE IF EXISTS users_id_seq;
-
+--  Drop bookings table (first) and it's sequence (if they exist)
+DROP TABLE IF EXISTS bookings;
+DROP SEQUENCE IF EXISTS bookings_id_seq;
 
 --  Drop accommodations table and it's sequence (if they exist)
 DROP TABLE IF EXISTS accommodations;
 DROP SEQUENCE IF EXISTS accommodations_id_seq;
 
---  Drop bookings table and it's sequence (if they exist)
-DROP TABLE IF EXISTS bookings;
-DROP SEQUENCE IF EXISTS bookings_id_seq;
 
+--  Drop users table and it's sequence (if they exist)
+DROP TABLE IF EXISTS users;
+DROP SEQUENCE IF EXISTS users_id_seq;
 
 
 --  Creates users table
@@ -44,3 +43,7 @@ CREATE TABLE bookings (
     constraint fk_user foreign key(user_id) references users(id) on delete cascade,
     constraint fk_accommodation foreign key(accommodation_id) references accommodations(id) on delete cascade
 );
+
+-- Adds records for testing
+
+INSERT INTO accommodations (place_name, start_date, end_date, host_id) VALUES ('Goldeneye', '20/12/23', '27/12/23', 7);
