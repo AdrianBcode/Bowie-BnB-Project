@@ -45,4 +45,6 @@ CREATE TABLE bookings (
     constraint fk_accommodation foreign key(accommodation_id) references accommodations(id) on delete cascade
 );
 
+-- Adds records for testing
 
+INSERT INTO accommodations (place_name, start_date, end_date, host_id) VALUES ("Goldeneye", "20/12/23", "27/12/23", 7);
