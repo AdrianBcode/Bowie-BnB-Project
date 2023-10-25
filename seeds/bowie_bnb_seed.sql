@@ -44,3 +44,5 @@ CREATE TABLE bookings (
     constraint fk_user foreign key(user_id) references users(id) on delete cascade,
     constraint fk_accommodation foreign key(accommodation_id) references accommodations(id) on delete cascade
 );
+
+
