@@ -1,8 +1,12 @@
 
 
---  Drop bookings table (first) and it's sequence (if they exist)
+--  Checks for old instance of previous table name ---
 DROP TABLE IF EXISTS bookings;
 DROP SEQUENCE IF EXISTS bookings_id_seq;
+
+--  Drops listings table (first) and it's sequence (if they exist)
+DROP TABLE IF EXISTS listings;
+DROP SEQUENCE IF EXISTS listings_id_seq;
 
 --  Drop accommodations table and it's sequence (if they exist)
 DROP TABLE IF EXISTS accommodations;
@@ -34,9 +38,9 @@ CREATE TABLE accommodations (
     host_id int
 );
 
---  Creates bookings table
-CREATE SEQUENCE IF NOT EXISTS bookings_id_seq;
-CREATE TABLE bookings (
+--  Creates listings table
+CREATE SEQUENCE IF NOT EXISTS listings_id_seq;
+CREATE TABLE listings (
     id SERIAL PRIMARY KEY,
     user_id int,
     accommodation_id int,
@@ -47,5 +51,15 @@ CREATE TABLE bookings (
 
 -- Adds records for testing
 
+
+-- Adds example accommodations to table 
+
 INSERT INTO accommodations (place_name, start_date, end_date, host_id) VALUES ('Goldeneye', '20/12/23', '27/12/23', 7);
+
+-- Adds example users to table 
+
 INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes');
+
+-- Adds example listings to table 
+
+INSERT INTO listings (user_id, accommodation_id, is_booked) VALUES (1, 1, TRUE);
