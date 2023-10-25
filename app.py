@@ -14,6 +14,11 @@ def get_index():
 def get_homepage():
     return render_template('homepage.html')
 
+# Creates the route for accommodation list page
+@app.route('/accommodations', methods=['GET'])
+def get_accommodations():
+    return render_template('accommodations.html')
+
 # HTTP Method that gets user id and redirects to accomadation form Page
 # It will be a get request --> we need user id
 # we need to validate it 
