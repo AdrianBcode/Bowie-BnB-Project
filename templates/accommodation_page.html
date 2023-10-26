@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style-spaces.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="/static/script-spaces.js"></script>
+    <title>Stay at {{ accommodation.place_name}}</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="/static/assets/logos/bowie_logo_light.gif" alt="BowieBnB Logo">
+        </div>
+        <div id="nav">
+            <a href="#">About</a> |
+            <a href="#">Login</a>
+        </div>
+    </header>
+
+    <div class="gallery">
+        <a target="_blank" href="#">
+            <img src="/static/assets/accomodation_images/{{ accommodation.img_path }}" alt="" width="600" height="400">
+        </a>
+        <div class="flex center"> {{ accommodation.place_name }}</div>
+        <div class="desc">{{ accommodation.description }}</div>
+    </div>
+</body>
+</html>
