@@ -10,14 +10,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-    <meta id="my-data" data-list="{{dates}}">
     <form>
         DATE:
         <input type="text" id="date">
         
 
     <script>
-        dates = ["20/10/2023", "21/10/2023", "22/10/2023", "23/01/2023"]
+        dates = '{{ dates }}'
 function DisableDates(date) {
     var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
     return [dates.indexOf(string) == -1];
