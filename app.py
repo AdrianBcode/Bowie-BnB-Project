@@ -60,20 +60,21 @@ def get_accommodation_from_name(place_name):
 # we need to validate it 
 # and then redirect 
 
-# @app.route('/post_accomodation/<user>')
-# def success(user):
-#     # check to see if user is in database 
-#     # if sucessful go to accomadation page
-#     # if unsuccessful go to login page
 
-#     # question : how do we get user input, will the data be persisted throughout the web app ? 
-#     # question : is it good practice to have user id passed through the url? 
-#     pass
+@app.route('/post_accomodation')
+def success():
+    # check to see if user is in database 
+    # if sucessful go to accomadation page
+    # if unsuccessful go to login page
+    dates = ["20/10/2023", "21/10/2023", "22/10/2023", "23/01/2023"];
+    # question : how do we get user input, will the data be persisted throughout the web app ? 
+    # question : is it good practice to have user id passed through the url? 
+    return render_template('date.html', dates = dates)
 
-# @app.route('/post_accomodation/<user>', methods = ['POST'])
-# def new_accomodation():
-#     # this method will add the necessary information to the accomodations table, check table for the neccessary colunns, this is onclick after the form has been submitted
-#     pass 
+@app.route('/post_accomodation', methods = ['POST'])
+def new_accomodation():
+    # this method will add the necessary information to the accomodations table, check table for the neccessary colunns, this is onclick after the form has been submitted
+    return render_template('') 
 
 # These lines start the server if you run this file directly
 # They also start the server configured to use the test database
