@@ -21,4 +21,4 @@ class AccommodationRepository:
         rows = self.connection.execute(
             "SELECT * from accommodations WHERE place_name = %s",[place_name])
         row = rows[0]
-        return Accommodation(row['id'],row['place_name'],row['description'],row['price'],row['host_id'],row['img_path'])
+        return Accommodation(row['id'],row['place_name'],row['host_id'],row['img_path'],row['description'],row['price'])
