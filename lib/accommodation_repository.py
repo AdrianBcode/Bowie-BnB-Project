@@ -6,9 +6,9 @@ class AccommodationRepository:
 
     
     def all(self):
-        rows = self.connection.execute("SELECT * FROM accommodations;")
+        rows = self.connection.execute("SELECT * FROM accommodations")
         return [
-            Accommodation(row['id'],row['place_name'],row['description'],row['price'],row['host_id'],row['img_path']) for row in rows
+            Accommodation(row['id'],row['place_name'],row['host_id'],row['img_path'],row['description'],row['price']) for row in rows
         ]
     
     def create(self, accommodation):
