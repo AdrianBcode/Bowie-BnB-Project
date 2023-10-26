@@ -59,17 +59,17 @@ CREATE TABLE listings (
 -- -- Adds example users to table 
 
 INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes');
-('Angie', 'Angie@example.com', 'changes');
-('Magie', 'magie56@example.com', 'september1');
-('Carol', 'ccarol.12@example.com', 'christmas');
-('Severus', 'severus.09@example.com', 'snape123');
-('Thomas', 'tom123@example.com', 'cooawl');
-('Joe', 'howyoudoing@example.com', 'friends');
-('Freddie', 'queens6@example.com', 'ilovemusic');
-('David', 'davi.d@example.com', 'password');
-('Karen', 'karen.mc0@example.com', 'mchammer');
-('Zack', 'zack.finley@example.com', 'traveller');
-('Monica', 'monica123@example.com', 'beverly321');
+INSERT INTO users (name, email, password) VALUES('Angie', 'Angie@example.com', 'changes');
+INSERT INTO users (name, email, password) VALUES('Magie', 'magie56@example.com', 'september1');
+INSERT INTO users (name, email, password) VALUES('Carol', 'ccarol.12@example.com', 'christmas');
+INSERT INTO users (name, email, password) VALUES('Severus', 'severus.09@example.com', 'snape123');
+INSERT INTO users (name, email, password) VALUES('Thomas', 'tom123@example.com', 'cooawl');
+INSERT INTO users (name, email, password) VALUES('Joe', 'howyoudoing@example.com', 'friends');
+INSERT INTO users (name, email, password) VALUES('Freddie', 'queens6@example.com', 'ilovemusic');
+INSERT INTO users (name, email, password) VALUES('David', 'davi.d@example.com', 'password');
+INSERT INTO users (name, email, password) VALUES('Karen', 'karen.mc0@example.com', 'mchammer');
+INSERT INTO users (name, email, password) VALUES('Zack', 'zack.finley@example.com', 'traveller');
+INSERT INTO users (name, email, password) VALUES('Monica', 'monica123@example.com', 'beverly321');
 
 -- -- Adds example accommodations to table 
 
