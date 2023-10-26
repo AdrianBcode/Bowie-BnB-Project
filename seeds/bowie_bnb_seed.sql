@@ -58,7 +58,7 @@ CREATE TABLE listings (
 
 -- -- Adds example users to table 
 
-INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes'),
+INSERT INTO users (name, email, password) VALUES
 ('Angie', 'Angie@example.com', 'changes'),
 ('Magie', 'magie56@example.com', 'september1'),
 ('Carol', 'ccarol.12@example.com', 'christmas'),
