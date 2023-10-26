@@ -7,9 +7,11 @@ and host_id they are reflected in the instance properties
 '''
 
 def test_accommodation_constructs():
-    accommodation = Accommodation(1, "Goldeneye", "20/12/23", "27/12/23", 7)
+    accommodation = Accommodation(1, "Goldeneye", 7, " ", "Perfect for super villians!", "£2000 per night")
     assert accommodation.id == 1
     assert accommodation.place_name == "Goldeneye"
-    assert accommodation.start_date == "20/12/23"
-    assert accommodation.end_date == "27/12/23"
     assert accommodation.host_id == 7
+    assert accommodation.img_path == " "
+    assert accommodation.description == "Perfect for super villians!"
+    assert accommodation.price == "£2000 per night"
+    

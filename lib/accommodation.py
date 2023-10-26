@@ -1,6 +1,6 @@
 # Model class
 class Accommodation:
-    def __init__(self, id, place_name, description, price, host_id, img_path):
+    def __init__(self, id, place_name, host_id, img_path, description, price):
         self.id = id
         self.place_name = place_name
         self.description = description
