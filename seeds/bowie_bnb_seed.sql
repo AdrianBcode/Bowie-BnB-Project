@@ -74,16 +74,16 @@ INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 
 -- -- Adds example accommodations to table 
 
 INSERT INTO accommodations (place_name, host_id, img_path, description, price) 
-VALUES ('The Glass Jewel', 1, ' ','Nestled atop the hills of Beverly Hills, California.','£2000 Per Night');
-VALUES ('The Floating Oasis', 2, ' ','Beautiful floating mansion with a retractable roof, Maldives.','£4000 Per Night');
-VALUES ('The Treehouse Retreat', 3, ' ','Hidden in the lush rainforests of Costa Rica.','£1800 Per Night');
-VALUES ('The Ice Palace', 4, ' ','An opulent space with a roaring fireplace in Aspen.', '£2480 Per Night');
-VALUES ('The Sky Cathedral', 5, ' ','Atop a towering skyscraper in the heart of Dubai. ','£1800 Per Night');
-VALUES ('The Floating Chateau', 6, ' ','Afloat on Lake Geneva, Switzerland.','£5500 Per Night');
-VALUES ('The Cave Dwelling', 7, ' ','Carved into the cliffs of Santorini, Greece','£6000 Per Night');
-VALUES ('The Timeless Castle', 8, ' ','Amid the rolling vineyards of Tuscany, Italy.','£2200 Per Night');
-VALUES ('The Opulent Aerie', 9, ' ','Perched atop a gleaming skyscraper in the heart of New York City.','£2200 Per Night');
-VALUES ('The Bash Mansion', 10, ' ','Situated in the heart of the lively Soho, London.','£2200 Per Night')
+VALUES ('The Glass Jewel', 1, 'img_1.jpg','Nestled atop the hills of Beverly Hills, California.','£2000 Per Night');
+VALUES ('The Floating Oasis', 2, 'img_2.jpg','Beautiful floating mansion with a retractable roof, Maldives.','£4000 Per Night');
+VALUES ('The Treehouse Retreat', 3, 'img_3.jpg','Hidden in the lush rainforests of Costa Rica.','£1800 Per Night');
+VALUES ('The Ice Palace', 4, 'img_4.jpg','An opulent space with a roaring fireplace in Aspen.', '£2480 Per Night');
+VALUES ('The Sky Cathedral', 5, 'img_5.jpg','Atop a towering skyscraper in the heart of Dubai. ','£1800 Per Night');
+VALUES ('The Floating Chateau', 6, 'img_6.jpg','Afloat on Lake Geneva, Switzerland.','£5500 Per Night');
+VALUES ('The Cave Dwelling', 7, 'img_7.jpg','Carved into the cliffs of Santorini, Greece','£6000 Per Night');
+VALUES ('The Timeless Castle', 8, 'img_8.jpg','Amid the rolling vineyards of Tuscany, Italy.','£2200 Per Night');
+VALUES ('The Opulent Aerie', 9, 'img_9.jpg','Perched atop a gleaming skyscraper in the heart of New York City.','£2200 Per Night');
+VALUES ('The Bash Mansion', 10, 'img_10.jpg','Situated in the heart of the lively Soho, London.','£2200 Per Night')
 
 -- -- Adds example listings to table 
 
