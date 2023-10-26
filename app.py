@@ -23,6 +23,36 @@ def get_index():
 def get_homepage():
     return render_template('homepage.html')
 
+# # Creates login route
+@app.route('/login', methods=['GET'])
+def get_login():
+    return render_template('login.html')
+
+# # Creates about route
+@app.route('/about', methods=['GET'])
+def get_about():
+    return render_template('about.html')
+
+# # Creates terms and conditions route
+@app.route('/terms', methods=['GET'])
+def get_terms():
+    return render_template('terms_and_conditions.html')
+
+# # Creates request view route (placeholder for now)
+@app.route('/requests', methods=['GET'])
+def get_requests():
+    return render_template('request_view.html')
+
+# # Creates confirm request view (placeholder for now)
+@app.route('/confirm', methods=['GET'])
+def get_confirm():
+    return render_template('request_confirmation.html')
+
+# # Creates confirm request view (placeholder for now)
+@app.route('/logout', methods=['GET'])
+def get_logout():
+    return render_template('logout.html')
+
 # # Post request for form on user signup page
 @app.route('/', methods=['POST'])
 def add_new_user():
