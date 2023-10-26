@@ -46,8 +46,11 @@ WHERE (listings.user_id IS NOT NULL
             Listing(row['id'],row['accommodation_id'],) for row in rows
         ]
 
-    def create_listing(self):
-        pass
+    def create_listing(self, listing):
+        self.connection.execute(
+            "INSERT INTO listings (user_id, accomodation_id, is_booked, start_date, end_date) VALUES (%s, %s, %s, %s, %s)",
+            [Listing.user_id, Listing.accomodation_id, Listing.is_booked, Listing.start_date,Listing.end_date])
+        
 
     def update_listing(self):
         pass

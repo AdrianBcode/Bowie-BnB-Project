@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BowieBnB</title>
+    <title>BowieBnB - List of accommodations</title>
     <link rel="stylesheet" type="text/css" href="/static/style-spaces.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <script src="/static/script-spaces.js"></script>
@@ -9,11 +9,13 @@
 <body>
     <header>
         <div id="logo">
-            <img src="/static/assets/logos/bowie_logo_light.gif" alt="BowieBnB Logo">
+            <a href="/">
+                <img src="/static/assets/logos/bowie_logo_light.gif" alt="BowieBnB Logo" href="/">
+            </a>
         </div>
         <div id="nav">
-            <a href="#">About</a> |
-            <a href="#">Login</a>
+            <a href="/about">About</a> |
+            <a href="/logout">Logout</a>
         </div>
     </header>
 
@@ -27,3 +29,5 @@
         <div class="desc">{{ accommodation.description }}</div>
     </div>
     {% endfor %}
+
+</body>
