@@ -58,7 +58,7 @@ def upload_file():
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('download_file', name=filename))
+            return redirect('/accommodations')
     return render_template('create_accommodation.html')
 
 # # Creates about route
@@ -151,4 +151,4 @@ def new_accomodation():
 # if started in test mode.
 
 if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get('PORT', 5001)))
+    app.run(debug=True, port=int(os.environ.get('PORT', 8080)))
