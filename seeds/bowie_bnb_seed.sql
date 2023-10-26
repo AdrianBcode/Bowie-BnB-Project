@@ -63,7 +63,7 @@ INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 
 
 -- -- Adds example accommodations to table 
 
-INSERT INTO accommodations (place_name, host_id, img_path, description, price) VALUES ('Goldeneye', 1, 'static/assets/accomodation_images/img_1.jpg','insert thing here','£2000 Per Night');
+INSERT INTO accommodations (place_name, host_id, img_path, description, price) VALUES ('Goldeneye', 1, 'img_1.jpg','insert thing here','£2000 Per Night');
 
 
 -- -- Adds example listings to table 
