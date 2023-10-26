@@ -4,7 +4,7 @@
 ### Have loads of local git branches (that you've deleted via GitHub after merging)?
 
 1. Use `git branch` or `git branch -a` to list all your current local branches (*`q` to exit*)
-2. Delete them individually via `git branch -r "your-branch-name-here"` 
+2. Delete them individually via `git branch -d "your-branch-name-here"` 
 
 Or, there's an automated way, with grep (USE AT YOUR OWN RISK)
 

@@ -3,10 +3,8 @@
 
 
 class ValidationTools:
-    def __init__(self, value: str):
-        self.value = value
-
-
+    def __init__(self):
+        pass
 
     def password_validator(self, input: str, specialchars, pass_length: int) -> bool:
         if len(input) >= pass_length and set(input).intersection(set(specialchars)):
