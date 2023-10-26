@@ -84,6 +84,7 @@ VALUES ('The Cave Dwelling', 7, ' ','Carved into the cliffs of Santorini, Greece
 VALUES ('The Timeless Castle', 8, ' ','Amid the rolling vineyards of Tuscany, Italy.','£2200 Per Night');
 VALUES ('The Opulent Aerie', 9, ' ','Perched atop a gleaming skyscraper in the heart of New York City.','£2200 Per Night');
 VALUES ('The Bash Mansion', 10, ' ','Situated in the heart of the lively Soho, London.','£2200 Per Night')
+
 -- -- Adds example listings to table 
 
 INSERT INTO listings (user_id, accommodation_id, is_booked, start_date,end_date) 
