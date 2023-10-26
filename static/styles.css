@@ -25,3 +25,10 @@ header {
     font-family: 'Helvetica Neue', sans-serif; 
 }
 
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}  
