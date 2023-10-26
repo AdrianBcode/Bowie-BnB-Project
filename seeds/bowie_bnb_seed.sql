@@ -59,13 +59,43 @@ CREATE TABLE listings (
 -- -- Adds example users to table 
 
 INSERT INTO users (name, email, password) VALUES ('Angie', 'Angie@example.com', 'changes');
-
+('Angie', 'Angie@example.com', 'changes');
+('Magie', 'magie56@example.com', 'september1');
+('Carol', 'ccarol.12@example.com', 'christmas');
+('Severus', 'severus.09@example.com', 'snape123');
+('Thomas', 'tom123@example.com', 'cooawl');
+('Joe', 'howyoudoing@example.com', 'friends');
+('Freddie', 'queens6@example.com', 'ilovemusic');
+('David', 'davi.d@example.com', 'password');
+('Karen', 'karen.mc0@example.com', 'mchammer');
+('Zack', 'zack.finley@example.com', 'traveller');
+('Monica', 'monica123@example.com', 'beverly321');
 
 -- -- Adds example accommodations to table 
 
-INSERT INTO accommodations (place_name, host_id, img_path, description, price) VALUES ('Goldeneye', 1, 'img_1.jpg','insert thing here','£2000 Per Night');
-
+INSERT INTO accommodations (place_name, host_id, img_path, description, price) 
+VALUES ('The Glass Jewel', 1, ' ','Nestled atop the hills of Beverly Hills, California.','£2000 Per Night');
+VALUES ('The Floating Oasis', 2, ' ','Beautiful floating mansion with a retractable roof, Maldives.','£4000 Per Night');
+VALUES ('The Treehouse Retreat', 3, ' ','Hidden in the lush rainforests of Costa Rica.','£1800 Per Night');
+VALUES ('The Ice Palace', 4, ' ','An opulent space with a roaring fireplace in Aspen.', '£2480 Per Night');
+VALUES ('The Sky Cathedral', 5, ' ','Atop a towering skyscraper in the heart of Dubai. ','£1800 Per Night');
+VALUES ('The Floating Chateau', 6, ' ','Afloat on Lake Geneva, Switzerland.','£5500 Per Night');
+VALUES ('The Cave Dwelling', 7, ' ','Carved into the cliffs of Santorini, Greece','£6000 Per Night');
+VALUES ('The Timeless Castle', 8, ' ','Amid the rolling vineyards of Tuscany, Italy.','£2200 Per Night');
+VALUES ('The Opulent Aerie', 9, ' ','Perched atop a gleaming skyscraper in the heart of New York City.','£2200 Per Night');
+VALUES ('The Bash Mansion', 10, ' ','Situated in the heart of the lively Soho, London.','£2200 Per Night')
 
 -- -- Adds example listings to table 
 
-INSERT INTO listings (user_id, accommodation_id, is_booked, start_date,end_date) VALUES (1, 1, TRUE,'10/10/2023','10/11/2023');
+INSERT INTO listings (user_id, accommodation_id, is_booked, start_date,end_date) 
+VALUES (1, 1, TRUE,'21/12/2023','30/12/2023');
+VALUES (2, 2, TRUE,'06/09/2023','13/09/2023');
+VALUES (2, 5, TRUE,'07/04/2023','15/04/2023');
+VALUES (4, 3, FALSE,'01/10/2023','10/10/2023');
+VALUES (5, 4, TRUE,'03/05/2023','03/06/2023');
+VALUES (6, 6, TRUE,'10/06/2023','10/07/2023');
+VALUES (7, 7, TRUE,'10/10/2023','10/11/2023');
+VALUES (8, 8, FALSE,'10/10/2023','10/11/2023');
+VALUES (9, 9, TRUE,'10/10/2023','10/11/2023');
+VALUES (NULL, 10, FALSE,'10/10/2023','10/11/2023');
+
