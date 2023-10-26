@@ -1,5 +1,6 @@
 import os
-from flask import Flask, request, render_template, redirect
+from flask import Flask,flash, request, render_template, redirect, url_for
+from werkzeug.utils import secure_filename
 from lib.database_connection import get_flask_database_connection
 from lib.validation_tools import ValidationTools
 from lib.user_repository import UserRepository
@@ -11,8 +12,20 @@ tools = ValidationTools()
 SPECIAL_CHARS = '!@*£&'
 MIN_PASSWORD_LENGTH = 8
 
+UPLOAD_FOLDER = './static/assets/accomodation_images'
+ALLOWED_EXTENSIONS = {'jpg'}
+
+
+# def allowed_file(filename):
+#     return '.' in filename and \
+#            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 # Create a new Flask app
 app = Flask(__name__)
+app.secret_key = 'super secret key'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SESSION_TYPE'] = 'filesystem'
+
+#  MAIN ROUTES #
 
 @app.route('/index', methods=['GET'])
 def get_index():
@@ -27,6 +40,26 @@ def get_homepage():
 @app.route('/login', methods=['GET'])
 def get_login():
     return render_template('login.html')
+
+# # Creates the list accommodation route
+@app.route('/create_listing', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # If the user does not select a file, the browser submits an
+        # empty file without a filename.
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file:
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('download_file', name=filename))
+    return render_template('create_accommodation.html')
 
 # # Creates about route
 @app.route('/about', methods=['GET'])
@@ -53,6 +86,11 @@ def get_confirm():
 def get_logout():
     return render_template('logout.html')
 
+
+
+# POST REQUESTS #
+
+
 # # Post request for form on user signup page
 @app.route('/', methods=['POST'])
 def add_new_user():
@@ -67,6 +105,8 @@ def add_new_user():
     else:
         return 'Please input a valid string inputfor all values', 400
     
+
+# GET REQUESTS #
 
 # Creates the route for the accommodation list page
 @app.route('/accommodations', methods=['GET'])
