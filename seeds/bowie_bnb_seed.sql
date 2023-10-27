@@ -47,8 +47,8 @@ CREATE TABLE listings (
     user_id int,
     accommodation_id int,
     is_booked BOOLEAN,
-    start_date VARCHAR(255),
-    end_date VARCHAR(255),
+    start_date DATE,
+    end_date DATE,
     constraint fk_user foreign key(user_id) references users(id) on delete cascade,
     constraint fk_accommodation foreign key(accommodation_id) references accommodations(id) on delete cascade
 );
@@ -85,16 +85,16 @@ INSERT INTO accommodations (place_name, host_id, img_path, description, price) V
 ('The Opulent Aerie', 9, 'img_9.jpg','Perched atop a gleaming skyscraper in the heart of New York City.','£2200 Per Night'),
 ('The Bash Mansion', 10, 'img_10.jpg','Situated in the heart of the lively Soho, London.','£2200 Per Night');
 
--- -- Adds example listings to table 
+-- -- Adds example listings to table (dates are yyyy-mm-dd)
 
 INSERT INTO listings (user_id, accommodation_id, is_booked, start_date,end_date) VALUES
-(1, 1, TRUE,'21/12/2023','30/12/2023'),
-(2, 2, TRUE,'06/09/2023','13/09/2023'),
-(2, 5, TRUE,'07/04/2023','15/04/2023'),
-(4, 3, FALSE,'01/10/2023','10/10/2023'),
-(5, 4, TRUE,'03/05/2023','03/06/2023'),
-(6, 6, TRUE,'10/06/2023','10/07/2023'),
-(7, 7, TRUE,'10/10/2023','10/11/2023'),
-(8, 8, FALSE,'10/10/2023','10/11/2023'),
-(9, 9, TRUE,'10/10/2023','10/11/2023'),
-(NULL, 10, FALSE,'10/10/2023','10/11/2023');
+(NULL, 1, FALSE,'2023-12-29','2023-12-30'),
+(2, 2, TRUE,'2023-11-20','2023-11-27'),
+(2, 5, TRUE,'2023-11-5','2023-11-10'),
+(4, 3, FALSE,'2023-12-1','2023-12-7'),
+(5, 4, TRUE,'2023-12-15','2023-12-29'),
+(NULL, 6, FALSE,'2023-12-29','2023-12-30'),
+(7, 7, TRUE,'2023-12-29','2023-12-30'),
+(8, 8, FALSE,'2023-10-26','2023-10-30'),
+(9, 9, TRUE,'2023-12-25','2023-12-30'),
+(NULL, 10, FALSE,'2023-12-29','2023-12-30');
