@@ -81,3 +81,7 @@ body {
 .gallery .desc {
     font-size: 14px;
 }
+
+input[type=text] {
+    border-radius: 2rem;
+}
