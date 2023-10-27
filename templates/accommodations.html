@@ -19,6 +19,16 @@
         </div>
     </header>
 
+    <div>
+        <form>
+            <label for="start_date" class="block mb-2 text-sm font-medium text-coral dark:text-white">Start Date</label>
+            <input name="start_date" id="start_date" type="text" placeholder="Input Date">
+            <label for="end_date" class="block mb-2 text-sm font-medium text-coral dark:text-white">End Date</label>
+            <input name="end_date" id="end_date" type="text" placeholder="Input Date">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
 
     {% for accommodation in accommodations %}
     <div class="gallery">
