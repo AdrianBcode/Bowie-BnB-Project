@@ -1,5 +1,6 @@
 from lib.listing import Listing
 from lib.accommodation import Accommodation
+import pandas
 
 class ListingsRepository:
     def __init__(self, connection):
@@ -58,3 +59,17 @@ WHERE (listings.user_id IS NOT NULL
 
     def delete_listing(self):
         pass
+
+    def find_dates_blocked(self, accomodation):
+        rows = self.connection.execute(
+            "SELECT * FROM listings WHERE accommodation_id = %s AND is_booked = %s", [accomodation, True])
+        data = [Listing(row['user_id'],row['accommodation_id'],row['start_date'],row['end_date'],row['is_booked']) for row in rows]
+        dates_list = []
+        for  d in data:
+            print(d.start_date)
+            print(d.end_date)
+            print(d.is_booked)
+
+            dates = pandas.date_range(d.start_date,d.end_date).strftime("%Y-%m-%d").tolist()
+            disable_dates = dates_list + dates    
+        return disable_dates
