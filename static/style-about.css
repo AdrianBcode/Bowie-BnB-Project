@@ -52,4 +52,7 @@ h1, h2, .unique-description {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 10px;
 }
