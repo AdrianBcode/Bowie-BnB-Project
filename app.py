@@ -5,6 +5,7 @@ from lib.database_connection import get_flask_database_connection
 from lib.validation_tools import ValidationTools
 from lib.user_repository import UserRepository
 from lib.accommodation_repository import AccommodationRepository
+from lib.listings_repository import ListingsRepository
 
 
 tools = ValidationTools()
@@ -109,11 +110,12 @@ def add_new_user():
 # GET REQUESTS #
 
 # Creates the route for the accommodation list page
-@app.route('/accommodations', methods=['GET'])
+@app.route('/accommodations', methods=['GET','POST'])
 def get_accommodations():
+
     connection = get_flask_database_connection(app)
-    repository = AccommodationRepository(connection)
-    accommodations = repository.all()
+    repository = ListingsRepository(connection)
+    accommodations = repository.find_unbooked_unrequested_listings('2023-12-29','2023-12-30')
     return render_template('accommodations.html', accommodations=accommodations)
 
 # Creates the route for an individual accomodation 
