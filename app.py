@@ -115,7 +115,7 @@ def get_accommodations():
 
     connection = get_flask_database_connection(app)
     repository = ListingsRepository(connection)
-    accommodations = repository.find_unbooked_unrequested_listings('2023-12-29','2023-12-30')
+    accommodations = repository.find_unbooked_unrequested_listings('2022-12-29','2024-12-30')
     return render_template('accommodations.html', accommodations=accommodations)
 
 # Creates the route for an individual accomodation 
