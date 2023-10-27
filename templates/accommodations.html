@@ -24,7 +24,7 @@
         <form class="search-form">
             <label for="start_date" class="block mb-2 text-sm font-medium text-coral dark:-coral">Start Date</label>
             <input name="start_date" id="start_date" type="text" placeholder="Input Date">
-            <label for "end_date" class="block mb-2 text-sm font-medium text-coral dark:text-white">End Date</label>
+            <label for name="end_date" class="block mb-2 text-sm font-medium text-coral dark:text-white">End Date</label>
             <input name="end_date" id="end_date" type="text" placeholder="Input Date">
             <button type="submit" style="background-color: coral; color: white; border: none; border-radius: 5px; padding: 10px 20px; transition: background-color 0.3s; display: flex; justify-content: center; align-items: center;">Search</button>
         </form>
@@ -33,7 +33,7 @@
             {% for accommodation in accommodations %}
             <div class="gallery">
                 <a target="_blank" href="/accommodations/{{ accommodation.place_name }}">
-                    <img src="/static/assets/accommodation_images/{{ accommodation.img_path }}" alt="" width="600" height="400">
+                    <img src="/static/assets/accomodation_images/{{ accommodation.img_path }}" alt="" width="600" height="400">
                 </a>
                 <div class="flex center"> {{ accommodation.place_name }}</div>
                 <div class="desc">{{ accommodation.description }}</div>
